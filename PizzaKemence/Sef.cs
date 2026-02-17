@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PizzaKemence;
+using System;
 using System.Threading;
+
 
 namespace PizzaKemence
 {
@@ -22,7 +24,8 @@ namespace PizzaKemence
 
 				string nev = nevek[rnd.Next(nevek.Length)];
 				int meret = rnd.Next(20, 41);
-				Pizza p = new Pizza(nev, meret);
+				int ar = meret * 100;
+				Pizza p = new Pizza(nev, meret, ar);
 
 				kemence.FeladPizza(p);
 				Console.WriteLine($"Séf készítette: {p}");
